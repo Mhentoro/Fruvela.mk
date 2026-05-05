@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="mk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Фрувела</title>
+  <meta name="description" content="Фрувела создава биоразградлива саксија од овошни лушпи и природни состојки." />
+  <link rel="icon" href="favicon.ico" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <svg class="svg-sprite" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="icon-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+    <symbol id="icon-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+    <symbol id="icon-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7"/></symbol>
+    <symbol id="icon-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-5"/></symbol>
+    <symbol id="icon-leaf" viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 4 13C4 6 12 3 20 3c0 8-3 16-10 16Z"/><path d="M4 20c5-6 10-9 16-17"/></symbol>
+    <symbol id="icon-recycle" viewBox="0 0 24 24"><path d="m7 19-2.3-4h4.6"/><path d="M7.2 19h6.5a2 2 0 0 0 1.7-1l1-1.8"/><path d="m16 5 2.3 4h-4.6"/><path d="M16.8 5h-6.5a2 2 0 0 0-1.7 1L7.4 8.1"/><path d="m12 9 3.3 5.8"/><path d="m12 9-3.3 5.8"/></symbol>
+    <symbol id="icon-sparkles" viewBox="0 0 24 24"><path d="M12 3l1.7 4.3L18 9l-4.3 1.7L12 15l-1.7-4.3L6 9l4.3-1.7Z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8Z"/><path d="M5 3l.8 2.2L8 6l-2.2.8L5 9l-.8-2.2L2 6l2.2-.8Z"/></symbol>
+    <symbol id="icon-trash" viewBox="0 0 24 24"><path d="M3 6h18"/><path d="M8 6V4h8v2"/><path d="m6 6 1 15h10l1-15"/><path d="M10 11v6M14 11v6"/></symbol>
+    <symbol id="icon-apple" viewBox="0 0 24 24"><path d="M12 6c1.4-2.2 3.5-2.8 5-2.7-.2 1.5-1.3 3-3.8 3.7"/><path d="M12 7C8.5 5.2 4.5 7.2 4.5 12.4c0 4.7 3.1 8.1 5.5 8.1 1 0 1.4-.5 2.2-.5.8 0 1.2.5 2.2.5 2.4 0 5.1-3.3 5.1-8.1 0-4.9-3.9-7.2-7.5-5.4Z"/></symbol>
+    <symbol id="icon-store" viewBox="0 0 24 24"><path d="m4 10 1-5h14l1 5"/><path d="M4 10c0 1.1.9 2 2 2s2-.9 2-2c0 1.1.9 2 2 2s2-.9 2-2c0 1.1.9 2 2 2s2-.9 2-2c0 1.1.9 2 2 2s2-.9 2-2"/><path d="M6 12v8h12v-8"/><path d="M9 20v-5h6v5"/></symbol>
+    <symbol id="icon-sprout" viewBox="0 0 24 24"><path d="M12 20V10"/><path d="M12 10c-5 0-7-2.5-8-6 4.5 0 7 2 8 6Z"/><path d="M12 12c5 0 7-2.5 8-6-4.5 0-7 2-8 6Z"/></symbol>
+    <symbol id="icon-tree" viewBox="0 0 24 24"><path d="M12 22v-6"/><path d="M8 16h8l-2.5-3H16l-3-4h2l-3-5-3 5h2l-3 4h2.5Z"/></symbol>
+    <symbol id="icon-droplets" viewBox="0 0 24 24"><path d="M7 14c0-2.5 3-5.5 3-5.5s3 3 3 5.5a3 3 0 0 1-6 0Z"/><path d="M14 17c0-2 2.5-4.5 2.5-4.5S19 15 19 17a2.5 2.5 0 0 1-5 0Z"/></symbol>
+    <symbol id="icon-flask" viewBox="0 0 24 24"><path d="M9 3h6"/><path d="M10 3v6l-5 9a2 2 0 0 0 1.7 3h10.6a2 2 0 0 0 1.7-3l-5-9V3"/><path d="M8 15h8"/></symbol>
+    <symbol id="icon-package" viewBox="0 0 24 24"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9Z"/><path d="M4 7.5 12 12l8-4.5"/><path d="M12 12v9"/><path d="m8 5.2 8 4.6"/></symbol>
+    <symbol id="icon-flower" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2.5"/><path d="M12 2c2 2.2 2 4.2 0 6-2-1.8-2-3.8 0-6Z"/><path d="M12 22c-2-2.2-2-4.2 0-6 2 1.8 2 3.8 0 6Z"/><path d="M2 12c2.2-2 4.2-2 6 0-1.8 2-3.8 2-6 0Z"/><path d="M22 12c-2.2 2-4.2 2-6 0 1.8-2 3.8-2 6 0Z"/></symbol>
+    <symbol id="icon-building" viewBox="0 0 24 24"><path d="M4 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16"/><path d="M16 8h2a2 2 0 0 1 2 2v11"/><path d="M8 7h4M8 11h4M8 15h4"/><path d="M9 21v-3h4v3"/></symbol>
+    <symbol id="icon-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-8 0v2"/><circle cx="12" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9"/><path d="M16 3.1a4 4 0 0 1 0 7.8"/><path d="M2 21v-2a4 4 0 0 1 3-3.9"/><path d="M8 3.1a4 4 0 0 0 0 7.8"/></symbol>
+    <symbol id="icon-coins" viewBox="0 0 24 24"><circle cx="8" cy="8" r="5"/><path d="M8 13c0 2.8 3.6 5 8 5 1.8 0 3.4-.4 4.6-1.1"/><path d="M13 8c3.8.3 7 2.3 7 5 0 1.4-.9 2.7-2.3 3.6"/><path d="M3 8v4c0 2.8 3.6 5 8 5"/></symbol>
+    <symbol id="icon-trending" viewBox="0 0 24 24"><path d="m3 17 6-6 4 4 8-8"/><path d="M14 7h7v7"/></symbol>
+    <symbol id="icon-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol>
+    <symbol id="icon-paint" viewBox="0 0 24 24"><path d="M18 12V5a2 2 0 0 0-2-2H5v9"/><path d="M5 12h14a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2h-1v3a2 2 0 0 1-4 0v-3H5a2 2 0 0 1-2-2v-1a2 2 0 0 1 2-2Z"/></symbol>
+    <symbol id="icon-megaphone" viewBox="0 0 24 24"><path d="m3 11 18-5v12L3 14Z"/><path d="M7 14v5a2 2 0 0 0 4 0v-4"/></symbol>
+    <symbol id="icon-testtube" viewBox="0 0 24 24"><path d="M10 2h8"/><path d="M14 2v7.5l-7.6 7.6a3.4 3.4 0 1 0 4.8 4.8L19 14V2"/><path d="M8.5 14h6"/></symbol>
+    <symbol id="icon-graduation" viewBox="0 0 24 24"><path d="m22 10-10-5-10 5 10 5Z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/><path d="M22 10v6"/></symbol>
+    <symbol id="icon-image" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8" cy="10" r="2"/><path d="m21 15-5-5L5 19"/></symbol>
+    <symbol id="icon-truck" viewBox="0 0 24 24"><path d="M3 6h12v10H3Z"/><path d="M15 10h4l2 3v3h-6Z"/><circle cx="7" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></symbol>
+    <symbol id="icon-shopping" viewBox="0 0 24 24"><path d="M6 8h15l-2 10H7Z"/><path d="M6 8 5 4H2"/><circle cx="9" cy="21" r="1"/><circle cx="18" cy="21" r="1"/></symbol>
+    <symbol id="icon-instagram" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8"/></symbol>
+  </svg>
+
+  <header class="site-header" id="site-header">
+    <nav class="container nav">
+      <a href="#pocetna" class="brand" aria-label="Фрувела почетна">
+        <img src="assets/logo.png" alt="Фрувела лого" class="brand-logo" />
+        <span>Фрувела</span>
+      </a>
+
+      <ul class="desktop-links" aria-label="Главна навигација">
+        <li><a href="#pocetna">Почетна</a></li>
+        <li><a href="#problem">Проблем</a></li>
+        <li><a href="#resenie">Решение</a></li>
+        <li><a href="#proizvod">Производ</a></li>
+        <li><a href="#prednosti">Предности</a></li>
+        <li><a href="#proces">Процес</a></li>
+        <li><a href="#pazar">Пазар</a></li>
+        <li><a href="#finansii">Финансии</a></li>
+        <li><a href="#tim">Тим</a></li>
+        <li><a href="#kontakt">Контакт</a></li>
+      </ul>
+
+      <button class="menu-button" id="menu-button" type="button" aria-label="Мени" aria-expanded="false">
+        <svg class="icon menu-icon"><use href="#icon-menu"></use></svg>
+        <svg class="icon close-icon"><use href="#icon-x"></use></svg>
+      </button>
+    </nav>
+
+    <div class="mobile-panel" id="mobile-panel">
+      <ul class="container mobile-links">
+        <li><a href="#pocetna">Почетна</a></li>
+        <li><a href="#problem">Проблем</a></li>
+        <li><a href="#resenie">Решение</a></li>
+        <li><a href="#proizvod">Производ</a></li>
+        <li><a href="#prednosti">Предности</a></li>
+        <li><a href="#proces">Процес</a></li>
+        <li><a href="#pazar">Пазар</a></li>
+        <li><a href="#finansii">Финансии</a></li>
+        <li><a href="#tim">Тим</a></li>
+        <li><a href="#kontakt">Контакт</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section id="pocetna" class="hero gradient-hero">
+      <div class="container hero-grid">
+        <div class="hero-copy animate-fade-up">
+          <span class="pill hero-pill"><svg class="icon"><use href="#icon-sparkles"></use></svg> Студентска компанија • Еко иновација</span>
+          <h1>Фрувела</h1>
+          <p class="hero-subtitle">Биоразградлива саксија од овошни лушпи</p>
+          <p class="hero-text">Еколошко решение што го претвора органскиот отпад во корисен производ за расад, цвеќиња и одржливо садење.</p>
+          <div class="hero-actions">
+            <a class="btn btn-hero" href="#proizvod">Погледни го производот <svg class="icon"><use href="#icon-arrow-right"></use></svg></a>
+            <a class="btn btn-eco" href="#kontakt">Контакт</a>
+          </div>
+        </div>
+
+        <div class="hero-visual animate-fade-up delay-1">
+          <div class="hero-glow gradient-primary"></div>
+          <div class="image-card">
+            <img src="assets/hero-pot.jpg" alt="Биоразградлива Фрувела саксија со растение, лушпи и листови" />
+            <div class="floating-badge badge-top"><svg class="icon"><use href="#icon-recycle"></use></svg></div>
+            <div class="floating-badge badge-bottom"><svg class="icon"><use href="#icon-leaf"></use></svg></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="problem" class="section bg-background">
+      <div class="container">
+        <div class="section-head">
+          <span class="pill eyebrow">Проблем</span>
+          <h2>Проблемот што го решаваме</h2>
+          <p>Пластиката останува со децении, а тони органски отпад секојдневно завршуваат на депониите.</p>
+        </div>
+        <div class="grid three-cards">
+          <article class="card large-card"><div class="icon-box accent"><svg class="icon"><use href="#icon-trash"></use></svg></div><p>Пластичните саксии по кратка употреба стануваат отпад.</p></article>
+          <article class="card large-card"><div class="icon-box accent"><svg class="icon"><use href="#icon-apple"></use></svg></div><p>Овошните лушпи најчесто се фрлаат, иако можат да се искористат.</p></article>
+          <article class="card large-card"><div class="icon-box accent"><svg class="icon"><use href="#icon-store"></use></svg></div><p>Производителите на расад и цвеќарниците имаат потреба од практична еко-алтернатива.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="resenie" class="section gradient-soft">
+      <div class="container">
+        <div class="section-head">
+          <span class="pill eyebrow">Решение</span>
+          <h2>Нашето решение</h2>
+          <p>Фрувела создава биоразградлива саксија од овошни лушпи и природни состојки. Саксијата е доволно цврста за употреба, но постепено омекнува и се разградува во почвата.</p>
+        </div>
+        <div class="flow-box">
+          <div class="flow-grid">
+            <div class="flow-step"><div class="flow-icon"><svg class="icon"><use href="#icon-apple"></use></svg></div><span>Овошни лушпи</span><svg class="icon flow-arrow"><use href="#icon-arrow-right"></use></svg></div>
+            <div class="flow-step"><div class="flow-icon"><svg class="icon"><use href="#icon-package"></use></svg></div><span>Био саксија</span><svg class="icon flow-arrow"><use href="#icon-arrow-right"></use></svg></div>
+            <div class="flow-step"><div class="flow-icon"><svg class="icon"><use href="#icon-sprout"></use></svg></div><span>Садење</span><svg class="icon flow-arrow"><use href="#icon-arrow-right"></use></svg></div>
+            <div class="flow-step"><div class="flow-icon"><svg class="icon"><use href="#icon-tree"></use></svg></div><span>Почва</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="proizvod" class="section bg-background">
+      <div class="container">
+        <div class="section-head no-subtitle"><span class="pill eyebrow">Производ</span><h2>Како функционира саксијата?</h2></div>
+        <div class="grid four-cards steps-grid">
+          <article class="card step-card"><div class="step-number">01</div><p>Се полни со земја и растение.</p></article>
+          <article class="card step-card"><div class="step-number">02</div><p>Се користи како обична саксија.</p></article>
+          <article class="card step-card"><div class="step-number">03</div><p>При пресадување не се вади растението.</p></article>
+          <article class="card step-card"><div class="step-number">04</div><p>Целата саксија се закопува и постепено се разградува.</p></article>
+        </div>
+        <div class="highlight gradient-primary"><svg class="icon"><use href="#icon-check"></use></svg><p>Заштедува време и го намалува ризикот од оштетување на коренот.</p></div>
+      </div>
+    </section>
+
+    <section id="prednosti" class="section gradient-soft">
+      <div class="container">
+        <div class="section-head no-subtitle"><span class="pill eyebrow">Предности</span><h2>Предности на производот</h2></div>
+        <div class="grid benefits-grid">
+          <article class="card benefit-card"><div class="icon-box small accent"><svg class="icon"><use href="#icon-trash"></use></svg></div><p>Намалување на пластичен отпад</p></article>
+          <article class="card benefit-card"><div class="icon-box small accent"><svg class="icon"><use href="#icon-recycle"></use></svg></div><p>Искористување на органски отпад</p></article>
+          <article class="card benefit-card"><div class="icon-box small accent"><svg class="icon"><use href="#icon-sprout"></use></svg></div><p>Полесно пресадување</p></article>
+          <article class="card benefit-card"><div class="icon-box small accent"><svg class="icon"><use href="#icon-leaf"></use></svg></div><p>Локално и одржливо решение</p></article>
+          <article class="card benefit-card"><div class="icon-box small accent"><svg class="icon"><use href="#icon-flower"></use></svg></div><p>Практична примена во расадници и цвеќарници</p></article>
+          <article class="card benefit-card"><div class="icon-box small accent"><svg class="icon"><use href="#icon-droplets"></use></svg></div><p>Биоразградлив материјал</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="sostojki" class="section bg-background">
+      <div class="container">
+        <div class="section-head no-subtitle"><span class="pill eyebrow">Состав</span><h2>Од што е направена саксијата?</h2></div>
+        <div class="grid five-cards ingredient-grid">
+          <article class="card ingredient-card"><div class="icon-box primary"><svg class="icon"><use href="#icon-apple"></use></svg></div><p>Овошни лушпи</p></article>
+          <article class="card ingredient-card"><div class="icon-box primary"><svg class="icon"><use href="#icon-flask"></use></svg></div><p>Агар-агар</p></article>
+          <article class="card ingredient-card"><div class="icon-box primary"><svg class="icon"><use href="#icon-droplets"></use></svg></div><p>Глицерин</p></article>
+          <article class="card ingredient-card"><div class="icon-box primary"><svg class="icon"><use href="#icon-sprout"></use></svg></div><p>Пченкарен скроб</p></article>
+          <article class="card ingredient-card"><div class="icon-box primary"><svg class="icon"><use href="#icon-droplets"></use></svg></div><p>Вода</p></article>
+        </div>
+        <div class="note-box"><p>Овошните лушпи се главната органска основа. Агар-агарот и пченкарниот скроб помагаат саксијата да ја задржи формата и постепено да омекнува во влажна средина. Глицеринот дава еластичност за саксијата да не пука пред садење. При разградба, овошните лушпи внесуваат органска материја во почвата и можат да ослободат мали количини хранливи елементи како калиум, калциум, магнезиум, фосфор и азот.</p></div>
+      </div>
+    </section>
+
+    <section id="proces" class="section gradient-soft">
+      <div class="container">
+        <div class="section-head no-subtitle"><span class="pill eyebrow">Процес</span><h2>Процес на производство</h2></div>
+        <div class="timeline">
+          <div class="timeline-line"></div>
+          <article class="timeline-row"><div class="timeline-icon"><svg class="icon"><use href="#icon-apple"></use></svg></div><div class="card timeline-card"><h3>Собирање овошни лушпи</h3><span>01</span></div></article>
+          <article class="timeline-row"><div class="timeline-icon"><svg class="icon"><use href="#icon-check"></use></svg></div><div class="card timeline-card"><h3>Селекција и подготовка</h3><span>02</span></div></article>
+          <article class="timeline-row"><div class="timeline-icon"><svg class="icon"><use href="#icon-flask"></use></svg></div><div class="card timeline-card"><h3>Варење и блендирање во паста</h3><span>03</span></div></article>
+          <article class="timeline-row"><div class="timeline-icon"><svg class="icon"><use href="#icon-droplets"></use></svg></div><div class="card timeline-card"><h3>Додавање природни состојки</h3><span>04</span></div></article>
+          <article class="timeline-row"><div class="timeline-icon"><svg class="icon"><use href="#icon-package"></use></svg></div><div class="card timeline-card"><h3>Обликување во калапи</h3><span>05</span></div></article>
+          <article class="timeline-row"><div class="timeline-icon"><svg class="icon"><use href="#icon-testtube"></use></svg></div><div class="card timeline-card"><h3>Сушење и тестирање</h3><span>06</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="pazar" class="section bg-background">
+      <div class="container">
+        <div class="section-head no-subtitle"><span class="pill eyebrow">Пазар</span><h2>Кој би го користел производот?</h2></div>
+        <div class="grid five-cards market-grid">
+          <article class="card market-card"><div class="icon-box accent"><svg class="icon"><use href="#icon-sprout"></use></svg></div><p>Производители на расад</p></article>
+          <article class="card market-card"><div class="icon-box accent"><svg class="icon"><use href="#icon-flower"></use></svg></div><p>Цвеќарници</p></article>
+          <article class="card market-card"><div class="icon-box accent"><svg class="icon"><use href="#icon-building"></use></svg></div><p>Агроаптеки</p></article>
+          <article class="card market-card"><div class="icon-box accent"><svg class="icon"><use href="#icon-tree"></use></svg></div><p>Градинарски центри</p></article>
+          <article class="card market-card"><div class="icon-box accent"><svg class="icon"><use href="#icon-users"></use></svg></div><p>Хоби-градинари</p></article>
+        </div>
+        <p class="section-paragraph">Фрувела започнува локално, со директна продажба кон расадници, цвеќарници и агроаптеки, а подоцна може да се прошири преку онлајн продажба и партнерства.</p>
+      </div>
+    </section>
+
+    <section id="konkurencija" class="section gradient-soft">
+      <div class="container">
+        <div class="section-head no-subtitle"><span class="pill eyebrow">Конкуренција</span><h2>Што нè прави различни?</h2></div>
+        <div class="grid three-cards competition-grid">
+          <article class="card competition-card"><h3>Пластични саксии</h3><p>Евтини се, но создаваат отпад што останува со децении.</p></article>
+          <article class="card competition-card"><h3>Хартиени, тресетни, кокосови</h3><p>Биоразградливи, но често се увозни и поскапи.</p></article>
+          <article class="card competition-card primary-card"><h3>Фрувела</h3><p>Користи локален органски отпад, има практична примена и се сади заедно со растението.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="finansii" class="section bg-background">
+      <div class="container">
+        <div class="section-head"><span class="pill eyebrow">Финансии</span><h2>Финансиски потенцијал</h2><p>Транспарентни проекции базирани на реални пресметки за локален пазар.</p></div>
+        <div class="grid financial-grid">
+          <article class="card metric-card"><div class="metric-top"><span>Продажна цена</span><div class="metric-icon"><svg class="icon"><use href="#icon-coins"></use></svg></div></div><div class="metric-value"><strong>12</strong><span>ден</span></div></article>
+          <article class="card metric-card"><div class="metric-top"><span>Производствен трошок</span><div class="metric-icon"><svg class="icon"><use href="#icon-coins"></use></svg></div></div><div class="metric-value"><strong>6</strong><span>ден</span></div></article>
+          <article class="card metric-card"><div class="metric-top"><span>Маржа по саксија</span><div class="metric-icon"><svg class="icon"><use href="#icon-trending"></use></svg></div></div><div class="metric-value"><strong>6</strong><span>ден</span></div></article>
+          <article class="card metric-card"><div class="metric-top"><span>Планирана продажба</span><div class="metric-icon"><svg class="icon"><use href="#icon-package"></use></svg></div></div><div class="metric-value"><strong>15.000</strong><span>саксии / месец</span></div></article>
+          <article class="card metric-card"><div class="metric-top"><span>Месечен приход</span><div class="metric-icon"><svg class="icon"><use href="#icon-trending"></use></svg></div></div><div class="metric-value"><strong>180.000</strong><span>ден</span></div></article>
+          <article class="card metric-card"><div class="metric-top"><span>Добивка пред плата</span><div class="metric-icon"><svg class="icon"><use href="#icon-coins"></use></svg></div></div><div class="metric-value"><strong>90.000</strong><span>ден</span></div></article>
+          <article class="card metric-card"><div class="metric-top"><span>Добивка по една плата</span><div class="metric-icon"><svg class="icon"><use href="#icon-trending"></use></svg></div></div><div class="metric-value"><strong>≈ 51.000</strong><span>ден / месец</span></div></article>
+          <article class="card metric-card"><div class="metric-top"><span>Почетна инвестиција</span><div class="metric-icon"><svg class="icon"><use href="#icon-target"></use></svg></div></div><div class="metric-value"><strong>400.000</strong><span>ден</span></div></article>
+          <article class="card metric-card"><div class="metric-top"><span>Период на враќање</span><div class="metric-icon"><svg class="icon"><use href="#icon-check"></use></svg></div></div><div class="metric-value"><strong>2</strong><span>години</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="tim" class="section gradient-soft">
+      <div class="container">
+        <div class="section-head no-subtitle"><span class="pill eyebrow">Тим</span><h2>Тимот зад Фрувела</h2></div>
+        <div class="grid three-cards team-grid">
+          <article class="card team-card"><div class="avatar"><svg class="icon"><use href="#icon-image"></use></svg></div><h3>Матеј Настески</h3><div class="member-label"><svg class="icon"><use href="#icon-paint"></use></svg><span>Член на тим</span></div><p>Визуелен идентитет, дизајн и веб-присуство</p></article>
+          <article class="card team-card"><div class="avatar"><svg class="icon"><use href="#icon-image"></use></svg></div><h3>Симон Стевковски</h3><div class="member-label"><svg class="icon"><use href="#icon-megaphone"></use></svg><span>Член на тим</span></div><p>Маркетинг, партнерства и набавка на органски отпад</p></article>
+          <article class="card team-card"><div class="avatar"><svg class="icon"><use href="#icon-image"></use></svg></div><h3>Калин Петрушевски</h3><div class="member-label"><svg class="icon"><use href="#icon-testtube"></use></svg><span>Член на тим</span></div><p>Развој на материјалот, тестирање и производствен процес</p></article>
+        </div>
+        <article class="card mentor-card"><div class="mentor-icon"><svg class="icon"><use href="#icon-graduation"></use></svg></div><div><span>Ментор</span><h3>Лидија Стојчева</h3></div></article>
+      </div>
+    </section>
+
+    <section id="planovi" class="section bg-background">
+      <div class="container">
+        <div class="section-head no-subtitle"><span class="pill eyebrow">Иднина</span><h2>Идни планови</h2></div>
+        <div class="grid benefits-grid future-grid">
+          <article class="card future-card"><div class="icon-box small accent"><svg class="icon"><use href="#icon-package"></use></svg></div><p>Подобри калапи и поголем производствен капацитет</p></article>
+          <article class="card future-card"><div class="icon-box small accent"><svg class="icon"><use href="#icon-truck"></use></svg></div><p>Повеќе партнери за собирање органски отпад</p></article>
+          <article class="card future-card"><div class="icon-box small accent"><svg class="icon"><use href="#icon-trending"></use></svg></div><p>Намалување на трошоците преку поголеми количини</p></article>
+          <article class="card future-card"><div class="icon-box small accent"><svg class="icon"><use href="#icon-shopping"></use></svg></div><p>Различни големини на саксии</p></article>
+          <article class="card future-card"><div class="icon-box small accent"><svg class="icon"><use href="#icon-building"></use></svg></div><p>Партнерства со расадници, агроаптеки и градинарски центри</p></article>
+          <article class="card future-card"><div class="icon-box small accent"><svg class="icon"><use href="#icon-sparkles"></use></svg></div><p>Развој во локален еко-бренд</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontakt" class="contact-section">
+      <div class="container">
+        <div class="contact-card gradient-primary">
+          <div class="contact-glow glow-one"></div>
+          <div class="contact-glow glow-two"></div>
+          <div class="contact-content">
+            <div class="contact-icon"><svg class="icon"><use href="#icon-leaf"></use></svg></div>
+            <h2>Контакт</h2>
+            <p>Следете го развојот на Фрувела и нашето еко-решение.</p>
+            <a href="https://instagram.com/fruvela.mk" target="_blank" rel="noopener noreferrer" class="instagram-link"><svg class="icon"><use href="#icon-instagram"></use></svg>@fruvela.mk</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand"><span class="footer-icon gradient-primary"><svg class="icon"><use href="#icon-leaf"></use></svg></span>Фрувела</div>
+      <p class="footer-tagline">Фрувела – сади паметно за да јадеш здраво.</p>
+      <p class="footer-copy">© <span id="year"></span> Фрувела</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
